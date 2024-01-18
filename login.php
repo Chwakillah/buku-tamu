@@ -4,6 +4,17 @@
     if(isset($_POST['login'])){
         $username = $_POST['username'];
         $password = $_POST['password'];
+
+        $sql = "SELECT * FROM users WHERE username = '$username' AND password ='$password'";
+
+        $result = $db->query($sql);
+
+        if($result->num_rows > 0){
+            echo "datanya ada";
+        }else{
+            echo"akun anda tidak ditemukan";
+        }
+
     }
 ?>
 <!DOCTYPE html>
@@ -18,7 +29,7 @@
     <h3>Masuk Akun</h3>
     <form action="login.php" method="POST">
         <input type="text" placeholder="username" name="username">
-        <input type="text" placeholder="password" name="password">
+        <input type="password" placeholder="password" name="password">
         <button type="submit" name="login">Masuk Sekarang</button>
     </form>
     <?php include "layout/footer.html"?>
