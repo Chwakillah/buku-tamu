@@ -11,7 +11,6 @@
     <main>
         <p>Halo selamat datang di website kami</p>
     </main>
-    <?php include "register.php"?>
     <?php include "layout/footer.html"?>
 </body>
 </html>

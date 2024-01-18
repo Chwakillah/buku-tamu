@@ -6,11 +6,13 @@
     <title>Document</title>
 </head>
 <body>
+    <?php include "layout/header.html"?>
     <h3>Daftar Akun</h3>
     <form action="">
         <input type="text" name="" placeholder="username"name="username">
         <input type="text" name="" placeholder="password"name="password">
         <button type="submit">Daftar Sekarang</button>
     </form>
+    <?php include "layout/footer.html"?>
 </body>
 </html>
